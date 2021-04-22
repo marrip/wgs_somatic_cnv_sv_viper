@@ -3,9 +3,13 @@ include: "rules/cnvnator.smk"
 include: "rules/manta.smk"
 include: "rules/tiddit.smk"
 
+
 rule all:
     input:
-        expand("analysis_output/{sample}/wgs_somatic_cnv_sv_viper.ok", sample=samples.index),
+        expand(
+            "analysis_output/{sample}/wgs_somatic_cnv_sv_viper.ok", sample=samples.index
+        ),
+
 
 rule workflow_complete:
     input:

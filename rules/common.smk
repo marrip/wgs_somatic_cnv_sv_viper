@@ -9,6 +9,7 @@ min_version("5.32.0")
 
 configfile: "config.yaml"
 
+
 validate(config, schema="../schemas/config.schema.yaml")
 
 
