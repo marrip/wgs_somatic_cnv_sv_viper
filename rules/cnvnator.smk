@@ -16,6 +16,7 @@ rule cnvnator:
     script:
         "../scripts/run_cnvnator.py"
 
+
 rule cnvnator2vcf:
     input:
         "analysis_output/{sample}/cnvnator/{sample}.out",
