@@ -15,3 +15,23 @@ rule cnvnator:
         "{rule}: Run CNVnator on sample {wildcards.sample}"
     script:
         "../scripts/run_cnvnator.py"
+
+
+rule cnvnator2vcf:
+    input:
+        "analysis_output/{sample}/cnvnator/{sample}.out",
+    output:
+        "analysis_output/{sample}/cnvnator/{sample}.vcf",
+    params:
+        ref="GRCh38",
+    log:
+        "analysis_output/{sample}/cnvnator/cnvnator2vcf_{sample}.log",
+    container:
+        config["tools"]["cnvnator"]
+    message:
+        "{rule}: Generate vcf of {wildcards.sample} from CNVnator output"
+    shell:
+        "cnvnator2VCF.pl "
+        "-prefix {wildcards.sample} "
+        "-reference {params.ref} "
+        "{input} > {output} &> {log}"

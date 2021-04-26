@@ -3,8 +3,17 @@ samples: "samples.tsv"
 reference:
   fasta: ""
 
+cnvnator:
+  pon: ""
+
+manta:
+  pon: ""
+
 smoove:
   exclude: ""
+
+tiddit:
+  pon: ""
 
 tools:
   cnvnator: "docker://marrip/cnvnator:0.4.1"
