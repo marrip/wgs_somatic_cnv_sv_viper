@@ -33,9 +33,9 @@ wildcard_constraints:
 def compile_output_list(wildcards):
     output_list = []
     files = {
-        "cnvnator": ["out",],
-        "manta": ["vcf",],
-        "tiddit": ["vcf",],
+        "cnvnator": ["pon.vcf",],
+        "manta": ["pon.vcf",],
+        "tiddit": ["pon.vcf",],
     }
     for key in files.keys():
         output_list = output_list + expand(
