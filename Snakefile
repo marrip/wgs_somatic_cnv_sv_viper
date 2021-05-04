@@ -2,6 +2,7 @@ include: "rules/common.smk"
 include: "rules/cnvnator.smk"
 include: "rules/manta.smk"
 include: "rules/filter_vcf.smk"
+include: "rules/strelka.smk"
 include: "rules/tiddit.smk"
 
 
