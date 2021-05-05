@@ -37,7 +37,8 @@ rule strelka:
     threads: 40
     shell:
         "{input.script} "
-        "-j {threads} &> {log}"
+        "-j {threads} "
+        "-m local &> {log}"
 
 
 rule prep_strelka_vcf:
