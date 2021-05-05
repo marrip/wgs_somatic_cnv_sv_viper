@@ -16,7 +16,7 @@ rule config_strelka:
         "--tumorBam {input.bam} "
         "--referenceFasta {input.ref} "
         "--indelCandidates {input.indel} "
-        "--runDir=analysis_output/{wildcards.sample}/strelka &> {log}"
+        "--runDir analysis_output/{wildcards.sample}/strelka &> {log}"
 
 
 rule strelka:
