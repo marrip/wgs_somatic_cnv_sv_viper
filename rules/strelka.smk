@@ -38,7 +38,7 @@ rule strelka:
     shell:
         "{input.script} "
         "-j {threads} "
-        "-g unlimited &> {log}"
+        "-m sge &> {log}"
 
 
 rule prep_strelka_vcf:
