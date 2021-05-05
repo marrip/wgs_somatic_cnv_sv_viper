@@ -35,7 +35,6 @@ def compile_output_list(wildcards):
     files = {
         "cnvnator": ["pon.vcf",],
         "manta": ["pon.vcf",],
-        "strelka": ["vcf"],
         "tiddit": ["pon.vcf",],
     }
     for key in files.keys():
