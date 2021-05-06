@@ -14,9 +14,9 @@ More coming soon...
 
 To run this workflow, the following tools need to be available:
 
-1. python ≥ 3.8
-2. [snakemake](https://snakemake.readthedocs.io/en/stable/) ≥ 5.32.0
-3. [Singularity](https://sylabs.io/docs/) ≥ 3.7
+![python](https://img.shields.io/badge/python-3.8-blue)
+[![snakemake](https://img.shields.io/badge/snakemake-5.32.0-blue)](https://snakemake.readthedocs.io/en/stable/)
+[![singularity](https://img.shields.io/badge/singularity-3.7-blue)](https://sylabs.io/docs/)
 
 ## :school_satchel: Preparations
 
