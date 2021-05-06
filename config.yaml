@@ -3,6 +3,9 @@ samples: "samples.tsv"
 reference:
   fasta: ""
 
+cnvkit:
+  pon: ""
+
 cnvnator:
   pon: ""
 
@@ -16,6 +19,7 @@ tiddit:
   pon: ""
 
 tools:
+  cnvkit: "docker://marrip/cnvkit:0.9.7"
   cnvnator: "docker://marrip/cnvnator:0.4.1"
   common: "docker://marrip/common:1.1.0"
   manta: "docker://marrip/manta:v1.6.0"
