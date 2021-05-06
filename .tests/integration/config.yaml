@@ -3,19 +3,23 @@ samples: "samples.tsv"
 reference:
   fasta: "reference/WASH7P.fna"
 
+cnvkit:
+  pon: "reference/cnvkit_somatic_pon.cnn"
+
 cnvnator:
-  pon: ""
+  pon: "reference/cnvnator.bed"
 
 manta:
-  pon: ""
+  pon: "reference/manta.bed"
 
 smoove:
   exclude: "reference/exclude.bed"
 
 tiddit:
-  pon: ""
+  pon: "reference/tiddit.bed"
 
 tools:
+  cnvkit: "docker://marrip/cnvkit:0.9.7"
   cnvnator: "docker://marrip/cnvnator:0.4.1"
   common: "docker://marrip/common:1.1.0" 
   manta: "docker://marrip/manta:v1.6.0"

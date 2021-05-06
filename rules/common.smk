@@ -33,6 +33,7 @@ wildcard_constraints:
 def compile_output_list(wildcards):
     output_list = []
     files = {
+        "cnvkit": ["vcf"],
         "cnvnator": ["pon.vcf",],
         "manta": ["pon.vcf",],
         "tiddit": ["pon.vcf",],
