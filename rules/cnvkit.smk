@@ -16,6 +16,7 @@ rule cnvkit:
         "cnvkit.py batch "
         "{input.bam} "
         "-r {input.pon} "
+        "-m wgs "
         "-p {threads} "
         "-d analysis_output/{wildcards.sample}/cnvkit/ &> {log}"
 
