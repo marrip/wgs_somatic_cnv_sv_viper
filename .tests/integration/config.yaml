@@ -1,4 +1,5 @@
 samples: "samples.tsv"
+units: "units.tsv"
 
 reference:
   fasta: "reference/WASH7P.fna"
