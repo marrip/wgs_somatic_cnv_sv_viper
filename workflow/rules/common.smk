@@ -109,7 +109,7 @@ def compile_output_list(wildcards):
     for key in files.keys():
         output_list = output_list + expand(
             "analysis_output/{sample}/{tool}/{sample}.{ext}",
-            sample=wildcards.sample,
+            sample=samples.index,
             tool=key,
             ext=files[key],
         )
