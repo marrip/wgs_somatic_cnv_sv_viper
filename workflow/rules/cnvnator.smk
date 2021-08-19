@@ -35,5 +35,5 @@ rule cnvnator2vcf:
         (cnvnator2VCF.pl \
         -prefix {wildcards.sample} \
         -reference {params.ref} \
-        {input} &> {output}) 2> {log}
+        {input} 1> {output}) 2> {log}
         """
