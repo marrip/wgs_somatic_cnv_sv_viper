@@ -11,8 +11,10 @@ rule pon_filter_vcf:
     message:
         "{rule}: Filter {wildcards.sample} vcf using {input.bed}"
     shell:
-        "(bedtools intersect "
-        "-v "
-        "-header "
-        "-f 0.95 "
-        "-a {input.vcf} -b {input.bed} > {output}) &> {log}"
+        """
+        (bedtools intersect \
+        -v \
+        -header \
+        -f 0.95 \
+        -a {input.vcf} -b {input.bed} > {output}) &> {log}
+        """
