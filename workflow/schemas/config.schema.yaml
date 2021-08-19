@@ -4,6 +4,8 @@ type: object
 properties:
   samples:
     type: string
+  units:
+    type: string
   reference:
     type: object
     properties:
@@ -11,9 +13,18 @@ properties:
         type: string
     required:
       - fasta
+  cnvkit:
+    type: object
+    properties:
+      pon:
+        type: string
+    required:
+      - pon
   tools:
     type: object
     properties:
+      cnvkit:
+        type: string
       cnvnator:
         type: string
       common:
@@ -24,5 +35,6 @@ properties:
         type: string
   required:
     - samples
+    - units
     - reference
     - tools

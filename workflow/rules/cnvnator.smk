@@ -1,6 +1,6 @@
 rule cnvnator:
     input:
-        bam="analysis_output/{sample}/gather_bam_files/{sample}.bam",
+        bam="analysis_output/{sample}/gather_bam_files/{sample}_T.bam",
         ref=config["reference"]["fasta"],
     output:
         root="analysis_output/{sample}/cnvnator/{sample}.root",
@@ -31,7 +31,9 @@ rule cnvnator2vcf:
     message:
         "{rule}: Generate vcf of {wildcards.sample} from CNVnator output"
     shell:
-        "cnvnator2VCF.pl "
-        "-prefix {wildcards.sample} "
-        "-reference {params.ref} "
-        "{input} &> {output} 2> {log}"
+        """
+        (cnvnator2VCF.pl \
+        -prefix {wildcards.sample} \
+        -reference {params.ref} \
+        {input} &> {output}) 2> {log}
+        """
